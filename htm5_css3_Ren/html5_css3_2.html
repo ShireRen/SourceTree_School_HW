@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>html5_css3作業顯示新視窗</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="">
+  
+    <link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="img/icon.png">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container">
+      <div class="py-5">
+        <img src="img/newimg.png" class="img-thumbnail"  width="500" height="500" alt="rocket">
+        <h2 class="text-success font-weight-bold">這是表單輸入結果</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 order-md-6 mb-6 ">
+          <form class="card p-2" name="fm">
+              <div class="form-group">
+                  <label for="windata" class="font-weight-bold">輸入的資料</label>
+                  <textarea class="form-control" id="windata" name="windata" rows="20" readonly>....</textarea>
+              </div>
+              <input type="button" value="關閉視窗" id="btnSub" />
+          </form>
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+              <p class="mb-1">© 2020/05/05 陳煜仁</p>
+            </footer>
+        </div>
+</div>
+      <script src="/js/bootstrap.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript">
+           $(function () {
+            
+                document.getElementById("windata").value = window.opener.document.getElementById("impdata").value;
+                $("#btnSub").on("click", function () {  
+                    window.close();
+                });
+            });
+      </script>
+</body>
+</html>

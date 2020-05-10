@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>html5_css3作業</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="">
+  
+    <link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="img/icon.png">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      body{
+        font-family: "微軟正黑體";
+      }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container">
+      <div class="py-5 text-center">   
+        <img src="img/fly.png" class="img-thumbnail"  width="500" height="500" alt="rocket">
+        <h2 class="text-success font-weight-bold">這是個表單</h2>   
+      </div>
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted font-weight-bold">使用者輸入內容</span>
+          </h4>
+          <form class="card p-2">
+            <div class="col-md-12 mb-3">
+              <img class="card-img-top" src="img/doge.jpg" alt="doge">
+              <div class="form-group">
+                  <label for="impdata" class="font-weight-bold">輸入的資料</label>
+                  <textarea class="form-control" id="impdata" rows="15" readonly>目前什麼都沒有</textarea>
+                </div>
+          </div>
+          </form>
+        </div>
+      <div class="col-md-8 order-md-1">
+          <from class="needs-validation" name="formdata" id="formdata" action="html5_css3_2.html" method="POST">
+              <h4 class="mb-3 font-weight-bold">使用者資料</h4>
+              <div class="mb-3">
+                  <label for="name">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="You Name" required="" value="王阿明">
+                    <div class="invalid-feedback" style="width: 100%;">
+                      名字是必要欄位
+                    </div>
+              </div>
+              <div class="mb-3">
+                  <label for="birthday">生日</label>
+                  <input type="date" class="form-control" id="birthday" value="2020/05/05">
+             </div>
+             <div class="mb-3">
+                  <label for="phone">電話</label>
+                  <input type="text" class="form-control" id="phone" value="0908299975">
+              </div>
+              <div class="mb-3">
+                  <label for="email">電子郵件</label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" value="test@gmail.com">
+                  <div class="invalid-feedback">
+                    輸入有效的電子郵件
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label for="address">地址</label>
+                  <input type="text" class="form-control" id="address" placeholder="虎尾科技大學" required="" value="虎尾科技大學">
+              </div>
+              <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="country">國家</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">選擇...</option>
+                      <option>美國</option>
+                      <option>台灣</option>
+                      <option>日本</option>
+                      <option>中國</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      請選擇一個國家
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="sex">性別</label>
+                    <div class="sex">
+                        <div class="col-md-3 mb-3 form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex" id="man" value="男">
+                            <label class="form-check-label" for="man">男</label>
+                          </div>
+                          <div class="col-md-3 mb-3 form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex" id="female" value="女">
+                            <label class="form-check-label" for="female">女</label>
+                          </div>
+                        <div class="invalid-feedback">
+                          性別是必要項目
+                        </div>
+                      </div>
+                  </div>   
+                  <div class="col-md-5 mb-3">
+                      <label for="Likehabits">喜好</label>
+                      <form  id="Likehabits" name ="Likehabits">
+                        <div class="col-md-3 mb-3 form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="habits" value="睡覺">
+                            <label class="form-check-label" for="habits">睡覺</label>
+                        </div>
+                        <div class="col-md-3 mb-3 form-check-inline">
+                            <input class="form-check-input" type="checkbox"  id="habits" value="看書">
+                            <label class="form-check-label" for="habits">看書</label>
+                        </div>
+                        <div class="col-md-3 mb-3 form-check-inline">
+                            <input class="form-check-input" type="checkbox"  id="habits" value="聽歌">
+                            <label class="form-check-label" for="habits">聽歌</label>
+                        </div>                      
+                      </form>                          
+                  </div>                         
+              </div>
+              <div class="row">
+                  <div class="col-md-12 mb-3">
+                      <div class="form-group">
+                          <label for="Remarks">備註</label>
+                          <textarea class="form-control" id="Remarks" rows="3">因為我懶所以全部預設資料</textarea>
+                        </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="FormData('html5_css3_2.html');">送出</button>
+          </from>      
+          <hr class="mb-4">
+      </div>
+    </div>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2020/05/05 陳煜仁</p>
+  </footer>
+</div>
+    
+ 
+<script src="/js/bootstrap.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  var WinObj; 
+   function FormData(url)
+   {
+    
+     const name = document.getElementById("name").value;
+     const birthday = document.getElementById("birthday").value;
+     const phone = document.getElementById("phone").value;
+     const email = document.getElementById("email").value;
+     const country = document.getElementById("country").value;
+     const address = document.getElementById("address").value;
+     const Remarks = document.getElementById("Remarks").value;
+     var sex = "";
+     var Likehabits = [];
+     var Total_Obj = document.getElementsByTagName("input");
+         for(var i=0;i<Total_Obj.length;i++)
+         {
+           if(Total_Obj[i].type == "radio")
+           {
+             if(Total_Obj[i].checked){
+               if(sex ==""){
+                 sex = Total_Obj[i].value; 
+               }     
+             }
+           }
+           if(Total_Obj[i].type == "checkbox")
+           {
+             if(Total_Obj[i].checked){
+                 Likehabits.push(Total_Obj[i].value);         
+             }
+           }                
+         }                             
+     document.getElementById("impdata").value=
+     "姓名： " + name + 
+     "\n電子郵件： " + email + 
+     "\n生日： " + birthday +  
+     "\n電話： " + phone +  
+     "\n地址： " + address +
+     "\n國家： "+ country +
+     "\n性別： "+ sex +
+     "\n喜好： "+ Likehabits.join()+
+     "\n備註： "+ Remarks ;
+    WinObj = window.open(url,'', 'height=500, width=500, top=100,left=250, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no,status=no');     
+   }
+ </script>
+</body>
+</html>
